@@ -16,6 +16,8 @@ function App() {
       <Button text="hello" color="primary"></Button>
       <Button text="hello" color="secondary"></Button>
       <Button text="hello" color="danger" disabledShadow></Button>
+      <Button text="hello" color="primary" startIcon="cart"></Button>
+      <Button text="hello" color="primary"  endIcon="cart"></Button>
     </div>
   );
 }
