@@ -5,16 +5,90 @@
     text-align: center;
     min-width: 80px;
     min-height: 35px;
-    background-color: $button-bgr-color;
+    background-color: #e0e0e0;
     box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
     border-radius: 6px;
+    border: 1px solid transparent;
     cursor: pointer;
-    color: $button-text-color;
+    line-height: 0.3px;
+    text-transform: capitalize;
+    color: #3F3F3F;
     font-size: 1.4rem;
-    font-weight: 500;
+    font-weight: 700;
+    font-family: $global-primary-font;
     transition: all 0.2s ease-in-out;
+    user-select: none;
+    &:active{
+        outline: none;
+    }
     &:hover, &:focus{
         color: #3F3F3F;
-        background-color: $button-bgr-color-hover;
+        background-color: #AEAEAE;
+    }
+    +.button {
+        margin-left: 15px;
+    }
+    /*Size*/
+    &.button--sm{
+        min-width: 73px;
+        min-height: 32px;
+    }
+    &.button--lg{
+        min-width: 93px;
+        min-height: 42px;
+    }
+    /*Color*/
+    &.button--primary{
+        background-color: #2962FF;
+        color: white;
+        &:hover, &:focus{
+            background-color: #0039CB;
+        }
+    }
+    &.button--secondary{
+        background-color: #455A64;
+        color: white;
+        &:hover, &:focus{
+            background-color: #1C313A;
+        }
+    }
+    &.button--danger{
+        background-color: #D32F2F;
+        color: white;
+        &:hover, &:focus{
+            background-color: #9A0007;
+        }
+    }
+    /*Variant*/
+    &.button--outline{
+        border: 1px solid #3D5AFE;
+        color: #3D5AFE;
+        background-color: white;
+        &:hover, &:focus{
+            background: rgba(41, 98, 255, 0.1);
+        }
+    }
+    &.button--text{
+        color: #3D5AFE;
+        background-color: transparent;
+        box-shadow: none;
+        &:hover, &:focus{
+            background-color: rgba(41, 98, 255, 0.1);
+        }
+        &:disabled{
+            pointer-events: none;
+            background-color: transparent;
+            color: #9E9E9E;
+        }
+    }
+    /*Disabled Shadow*/
+    &.button--disableShadow{
+        box-shadow: none;
+    }
+    /*Disabled*/
+    &:disabled{
+        background-color: #E0E0E0;
+        color: #9E9E9E;
+        pointer-events: none;
     }
 }

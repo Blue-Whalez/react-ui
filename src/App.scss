@@ -1,15 +1,25 @@
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+/*===========Global style setting==============*/
+$global-primary-font: 'Noto Sans', sans-serif;
+// /*Button*/
+// $button-bgr-color: #e0e0e0;
+// $button-bgr-color-hover: #AEAEAE;
+// $button-text-color:#3F3F3F;
+
+/*Style start*/
 html{
     font-size: 62.5%;
 }
-body{
+body {
+    margin: 0;
     font-size: 1.6rem;
     line-height: 1.5;
     box-sizing: border-box;
-}
-/*===========Global style setting==============*/
-/*Button*/
-$button-bgr-color: #e0e0e0;
-$button-bgr-color-hover: #AEAEAE;
-$button-text-color:#3F3F3F;
+    font-family: $global-primary-font;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+
 /*=============Components Import==============*/
 @import './components/Button/button.scss';

@@ -4,12 +4,32 @@ class Button extends PureComponent {
     constructor(props){
         super(props);
         this.state={};
-        let {variant, disabled, size, className} = props;
+    }
+    componentDidMount = () => {
+        let {variant, size, color, startIcon, endIcon, disabledShadow} = this.props;
+        let finalClassName="button";
+        if(variant && (variant=="outline" || variant=="text")){
+          finalClassName+=" button--"+variant;
+        }
+        if(size && (size=="sm" || size=="lg")){
+            finalClassName+=" button--"+size;
+        }
+        if(color && (color=="primary" || color=="secondary" || color=="danger" )){
+            finalClassName+=" button--"+color;
+        }
+        if(disabledShadow){
+            finalClassName+=" button--disableShadow";
+        }
+        this.setState({
+            className:finalClassName,
+            disabled: this.props.disabled? "disabled" : "",
+        });
     }
     render() { 
+        
         return ( 
             <Fragment>
-                <div className="button">{this.props.children}</div>
+                <button {...this.state}>{this.props.text}</button>
             </Fragment>
          );
     }
