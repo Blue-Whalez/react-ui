@@ -1,0 +1,15 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+/*===========Global style setting==============*/
+/*Button*/
+$button-bgr-color: #e0e0e0;
+$button-bgr-color-hover: #AEAEAE;
+$button-text-color:#3F3F3F;
+/*=============Components Import==============*/
+@import './components/Button/button.scss';
