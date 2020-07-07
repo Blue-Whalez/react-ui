@@ -6,7 +6,7 @@ import Button from './components/Button';
 function App() {
   return (
     <div className="container">
-      <Button text="hello" size="sm"></Button>
+      <Button type="link" text="hello" size="sm"></Button>
       <Button text="hello"></Button>
       <Button text="hello" size="lg"></Button>
       <Button text="hello" variant="outline"></Button>

@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    vertical-align: bottom;
     min-width: 80px;
     min-height: 35px;
     background-color: #e0e0e0;
@@ -86,7 +87,7 @@
         box-shadow: none;
     }
     /*Disabled*/
-    &:disabled{
+    &:disabled, &[disabled]{
         background-color: #E0E0E0;
         color: #9E9E9E;
         pointer-events: none;

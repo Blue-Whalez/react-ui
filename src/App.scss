@@ -19,7 +19,13 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
+.container{
+  width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 50px 15px;
+}
 
 /*=============Components Import==============*/
 @import './components/Button/button.scss';
