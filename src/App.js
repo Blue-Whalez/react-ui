@@ -18,13 +18,14 @@ function App() {
       <Button text="hello" color="danger" disabledShadow></Button>
       <Button text="hello" color="primary" startIcon="cart"></Button>
       <Button text="hello" color="primary"  endIcon="cart"></Button>
-      <Input id="inputne" name="a" label="Nhập:" placeholder="Viết vô đây"></Input>
-      <Input id="inputne" name="a" label="Nhập:" placeholder="Viết vô đây" size="sm"></Input>
-      <Input name="a" label="Nhập:" helpText="Đây là help text"></Input>
-      <Input name="a" label="Nhập:" placeholder="Viết vô đây" helpText="Đây là help text" multiline row="4"></Input>
-      <Input name="a" label="Nhập:" placeholder="Viết vô đây" value="Value"></Input>
-      <Input name="a" label="Nhập:" placeholder="Viết vô đây" helpText="đéo biết rê chuột vô đây nhập à?" error></Input>
-      <Input name="a" label="Nhập:" placeholder="Viết vô đây" error disabled></Input>
+      <Input id="inputne" name="a" label="Có ID:" placeholder="Viết vô đây"></Input>
+      <Input id="inputne" name="a" label="Size nhỏ" placeholder="Viết vô đây" size="sm"></Input>
+      <Input name="a" label="Input cơ bản" helpText="Đây là help text"></Input>
+      <Input name="a" label="Input nhiều dòng" placeholder="Viết vô đây" helpText="Này là textarea nè" multiline row="4"></Input>
+      <Input name="a" label="Có value" placeholder="Viết vô đây" value="Value"></Input>
+      <Input name="a" label="Có value" placeholder="Viết vô đây" value="Value" fullWidth></Input>
+      <Input name="a" label="Error" placeholder="Viết vô đây" helpText="RÊ CHUỘT VÔ NHẬP DOOOOÔ" error></Input>
+      <Input name="a" label="Disabled" placeholder="Viết vô đây" error disabled></Input>
     </div>
   );
 }

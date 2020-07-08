@@ -27,6 +27,12 @@ body {
   padding: 50px 15px;
 }
 
+.fa{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: plum;
+}
 /*=============Components Import==============*/
 @import './components/Button/button.scss';
 @import './components/Input/input.scss';
