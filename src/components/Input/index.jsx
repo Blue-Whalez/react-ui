@@ -15,16 +15,18 @@ export const Input = ({
     multiline,
     fullWidth,
     row,
+    inputRef,
     error,
     disabled
 }) =>{
-    const inputRef = useRef();
+    // const inputRef = useRef();
     let attr = {
         id,
         name,
-        value: value!=='' ? value : null,
+        defaultValue: value!=='' ? value : null,
         placeholder,
         row,
+        ref: inputRef ? inputRef : null,
         disabled: disabled? true : null,
     }
     let finalClassName="input__wrapper";
@@ -38,13 +40,13 @@ export const Input = ({
     if(disabled)
         finalClassName+=" input--disabled";
 
-    let element = <input className="input__bar" type="text" ref={inputRef} {...attr}></input>
+    let element = <input className="input__bar" type="text" {...attr}></input>
     if (multiline) {
-        element= <textarea className="input__bar" type="text" ref={inputRef} {...attr}></textarea>
+        element= <textarea className="input__bar" type="text" {...attr}></textarea>
     }
     return (
         <div className={finalClassName}>
-            {label? <label className="input__label" for={name}>{label}</label>: ''}
+            {label? <label className="input__label" htmlFor={name}>{label}</label>: ''}
             {element}
             {helpText? <div className="input__help-text">{helpText}</div> : ''}
         </div>
